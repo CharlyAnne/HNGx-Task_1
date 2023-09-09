@@ -4,6 +4,16 @@ function updateUTCTime() {
   utcTimeElement.textContent = currentUTCTime;
 }
 updateUTCTime();
-
 // UTC time updated every second (for real-time updating)
 setInterval(updateUTCTime, 1000);
+
+function updateCurrentDay() {
+    const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    const currentDayElement = document.querySelector('[data-testid="currentDayOfTheWeek"]');
+    
+    const today = new Date();
+    const dayOfWeek = daysOfWeek[today.getDay()];
+    
+    currentDayElement.textContent = `Today is ${dayOfWeek}`;
+}
+updateCurrentDay();
