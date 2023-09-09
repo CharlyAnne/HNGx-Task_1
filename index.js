@@ -2,10 +2,13 @@ function updateCurrentTime() {
     const currentUTCTimeElement = document.getElementById('current-utc-time');
 
     const now = new Date();
-    const westAfricaOffset = 60; // UTC+1, WAT.
-    const utcTime = new Date(now.getTime() + westAfricaOffset * 60000);
+    const options = {
+        timeZone: 'Africa/Lagos', // (WAT)
+        hour12: false, // 24-hour format
+    };
+    const watTime = now.toLocaleTimeString('en-US', options);
 
-    currentUTCTimeElement.textContent = `${utcTime.toLocaleTimeString()}`;
+    currentUTCTimeElement.textContent = `${watTime}`;
 }
 updateCurrentTime();
 
