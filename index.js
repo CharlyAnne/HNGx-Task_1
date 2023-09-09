@@ -17,3 +17,4 @@ function updateCurrentDay() {
     currentDayElement.textContent = `Today is ${dayOfWeek}`;
 }
 updateCurrentDay();
+
