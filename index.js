@@ -9,7 +9,7 @@ setInterval(updateUTCTime, 1000);
 
 function updateCurrentDay() {
     const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-    const currentDayElement = document.querySelector('[data-testid="currentDayOfTheWeek"]');
+    const currentDayElement = document.getElementById('current-day');
     
     const today = new Date();
     const dayOfWeek = daysOfWeek[today.getDay()];
