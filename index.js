@@ -1,8 +1,6 @@
 function updateCurrentTime() {
   const currentUTCTimeElement = document.getElementById('current-utc-time');
-
   const now = new Date();
-
   const watTime = now.toLocaleTimeString('en-US');
 
   currentUTCTimeElement.textContent = `${watTime}`;
