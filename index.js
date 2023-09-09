@@ -2,10 +2,10 @@ function updateCurrentTime() {
     const currentUTCTimeElement = document.getElementById('current-utc-time');
 
     const now = new Date();
-    const westAfricaOffset = -60; // UTC+1 for WAT, so we subtract 60 minutes
-    const watTime = new Date(now.getTime() + westAfricaOffset * 60000);
+    const westAfricaOffset = 60; // UTC+1, WAT.
+    const utcTime = new Date(now.getTime() + westAfricaOffset * 60000);
 
-    currentUTCTimeElement.textContent = `Current Time in West Africa: ${watTime.toLocaleTimeString()}`;
+    currentUTCTimeElement.textContent = `Current Time in West Africa: ${utcTime.toLocaleTimeString()}`;
 }
 
 updateCurrentTime();
