@@ -1,11 +1,14 @@
-function updateUTCTime() {
-  const utcTimeElement = document.getElementById('utc-time');
-  const currentUTCTime = new Date().toUTCString();
-  utcTimeElement.textContent = currentUTCTime;
+function updateCurrentTime() {
+    const currentUTCTimeElement = document.getElementById('current-utc-time');
+
+    const now = new Date();
+    const westAfricaOffset = 60; //  UTC+1, for WAT.
+    const utcTime = new Date(now.getTime() + westAfricaOffset * 60000);
+
+    currentUTCTimeElement.textContent = `Current Time in West Africa: ${utcTime.toLocaleTimeString()}`;
 }
-updateUTCTime();
-// UTC time updated every second (for real-time updating)
-setInterval(updateUTCTime, 1000);
+l
+updateCurrentTime();
 
 function updateCurrentDay() {
     const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
