@@ -15,7 +15,12 @@ let dayOfWeek = daysOfWeek[today.getDay()];
 document.getElementById('current-day').textContent = `Today is ${dayOfWeek}`;
 
 // UTC time
-let currentDate = new Date();
-let utcTime = currentDate.getTime();
+function updateUTC() {
+  let currentDate = new Date();
+  let utcTime = currentDate.getTime();
 
-document.getElementById('currentUTCTime').innerHTML = utcTime;
+  document.getElementById('currentUTCTime').innerHTML = utcTime;
+}
+
+updateUTC();
+setInterval(updateUTC, 100);
