@@ -3,30 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HNGx Task: Personal Webpage</title>
+    <title>HNGx Task: Profile Webpage</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
-      <h1 data-testid="charlian">Charlian Imoisili</h1>
-      <img
-        src="slack-profile-picture.jpg"
-        alt="charlian"
-        data-testid="slackDisplayImage"
-      />
-      <p data-testid="currentDayOfTheWeek">
-        Day of the Week: <span id="current-day"></span>
-      </p>
-      <p data-testid="currentUTCTime">
-        Current Time in West Africa: <span id="current-utc-time"></span>
-      </p>
-
-      <p class="track" data-testid="myTrack">My Track: Frontend</p>
+      <div class="flex">
+        <img
+          src="slack-profile-picture.jpg"
+          alt="charlian"
+          data-testid="slackDisplayImage"
+        />
+        <h2 data-testid="charlian">Charlian Imoisili</h2>
+      </div>
+      <hr style="width: 80%; height: 0.5px; background-color: brown" />
+      <main>
+        <p
+          class="maroon"
+          data-testid="currentDayOfTheWeek"
+          id="current-day"
+        ></p>
+        <p class="maroon" data-testid="currentUTCTime" id="currentUTCTime"></p>
+        <p class="maroon" data-testid="myTrack">Frontend Track</p>
+      </main>
       <a
+        class="black"
         href="https://github.com/CharlyAnne/HNGx-Task_1"
         data-testid="githubURL"
         target="_blank"
-        >GitHub Repository: HNGx-Task_1</a
+        >GitHub Repository ↗️</a
       >
     </div>
 

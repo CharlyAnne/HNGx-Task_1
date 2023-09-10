@@ -1,27 +1,21 @@
-function updateCurrentTime() {
-  const currentUTCTimeElement = document.getElementById('current-utc-time');
-  const now = new Date();
-  const watTime = now.toLocaleTimeString('en-US');
+//Current Day of the Week
 
-  currentUTCTimeElement.textContent = `${watTime}`;
-}
-updateCurrentTime();
+let today = new Date();
+let now = today.getDay();
+const daysOfWeek = [
+  'Sunday',
+  'Monday',
+  'Tuesday',
+  'Wednesday',
+  'Thursday',
+  'Friday',
+  'Saturday',
+];
+let dayOfWeek = daysOfWeek[today.getDay()];
+document.getElementById('current-day').textContent = `Today is ${dayOfWeek}`;
 
-function updateCurrentDay() {
-  const daysOfWeek = [
-    'Sunday',
-    'Monday',
-    'Tuesday',
-    'Wednesday',
-    'Thursday',
-    'Friday',
-    'Saturday',
-  ];
-  const currentDayElement = document.getElementById('current-day');
+// UTC time
+let currentDate = new Date();
+let utcTime = currentDate.getTime();
 
-  const today = new Date();
-  const dayOfWeek = daysOfWeek[today.getDay()];
-
-  currentDayElement.textContent = `Today is ${dayOfWeek}`;
-}
-updateCurrentDay();
+document.getElementById('currentUTCTime').innerHTML = utcTime;
