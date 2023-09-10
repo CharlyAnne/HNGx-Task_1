@@ -5,9 +5,9 @@ body {
   margin: 8% auto;
   align-content: center;
   padding: 2rem;
+  text-align: center;
   background-color: wheat;
   border-radius: 10px;
-  box-shadow: 5px 3px 3px #ff4f4f1a;
   text-align: center;
   width: 50%;
 }
@@ -62,4 +62,35 @@ a:hover {
   width: 20%;
   margin-top: 3rem;
   border-radius: 30px;
+}
+@media screen and (max-width: 480px) {
+  .container {
+    width: 90%;
+    max-width: 320px;
+  }
+  .flex {
+    padding: 0 1rem;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+  }
+  img {
+    margin: 20px auto;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+  }
+  .maroon {
+    width: 80%;
+    margin: 0.5rem auto;
+  }
+  a.black {
+    width: 80%;
+    margin-top: 1rem;
+  }
 }
